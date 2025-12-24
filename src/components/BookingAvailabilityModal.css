@@ -1,0 +1,199 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 95%;
+    max-width: 900px;
+    height: 80vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    padding: 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-controls button {
+    padding: 5px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.nav-controls input[type="date"] {
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.table-container {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    padding: 10px;
+}
+
+.loading-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: 120px repeat(7, minmax(80px, 1fr));
+    /* Sticky col + 7 days */
+    /* width 100% or min-content depending on needs */
+    min-width: 680px;
+    /* Force scroll on small screens */
+}
+
+/* Header Row */
+.header-row {
+    display: contents;
+    /* Allows children to participate in grid */
+}
+
+.header-cell {
+    background: #e9ecef;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #ced4da;
+    border-right: 1px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Specific Header Colors for Date Types */
+.header-cell.type-holiday {
+    background: #ffe3e3;
+    color: #c92a2a;
+}
+
+.header-cell.type-cny {
+    background: #ffc9c9;
+    color: #e03131;
+}
+
+/* Room Row */
+.room-row {
+    display: contents;
+}
+
+/* Cells */
+.sticky-col {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    z-index: 2;
+    /* Higher than normal cells */
+    border-right: 2px solid #ced4da;
+}
+
+/* Header's sticky corner needs higher z-index */
+.header-row .sticky-col {
+    z-index: 3;
+    background: #e9ecef;
+}
+
+.room-cell {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.room-no {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.room-type {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.slot-cell {
+    border-bottom: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+.status-open {
+    background-color: #d3f9d8;
+    color: #2b8a3e;
+    font-weight: bold;
+    border: 1px solid #b2f2bb;
+}
+
+.status-open:hover {
+    background-color: #b2f2bb;
+    transform: scale(1.05);
+}
+
+.status-sold-out {
+    background-color: #f1f3f5;
+    color: #adb5bd;
+    text-decoration: line-through;
+    cursor: not-allowed;
+    border: 1px solid #e9ecef;
+}
+
+.close-btn {
+    margin: 10px;
+    padding: 10px;
+    background: #339af0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+}

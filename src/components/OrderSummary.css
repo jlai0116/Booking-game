@@ -1,0 +1,197 @@
+.order-summary-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 成功動畫 */
+.success-animation {
+    margin-bottom: var(--spacing-lg);
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(17, 153, 142, 0.3);
+    margin: 0 auto;
+}
+
+/* 訂單摘要 */
+.order-summary {
+    max-width: 600px;
+    width: 100%;
+}
+
+.summary-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--border);
+}
+
+.summary-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.summary-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.booking-id {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--gradient-ocean);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* 區塊 */
+.summary-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 資訊列 */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.info-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* 費用列 */
+.fee-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.fee-label {
+    color: var(--text-secondary);
+}
+
+.fee-value {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.fee-total {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-md);
+    border-top: 3px solid var(--primary);
+    font-size: 1.3rem;
+}
+
+.total-label {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.total-value {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* 每日明細 */
+.daily-breakdown {
+    background: var(--bg-main);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+}
+
+.daily-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    align-items: center;
+}
+
+.daily-date {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.daily-type {
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.daily-type.weekday {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.daily-type.holiday {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.daily-type.cny {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.daily-price {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* 響應式 */
+@media (max-width: 600px) {
+    .summary-title {
+        font-size: 1.5rem;
+    }
+
+    .checkmark {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}

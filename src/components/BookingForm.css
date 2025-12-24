@@ -1,0 +1,203 @@
+.booking-form-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: var(--spacing-md) 0;
+}
+
+.booking-header {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    color: white;
+}
+
+.booking-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.booking-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* 日期選擇區塊 */
+.date-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 600px) {
+    .date-group {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* 區塊標題 */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+    color: var(--text-primary);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--border);
+}
+
+/* 容量資訊卡片 */
+.capacity-info {
+    margin: var(--spacing-lg) 0;
+}
+
+.capacity-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+
+@media (max-width: 600px) {
+    .capacity-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.capacity-item {
+    text-align: center;
+}
+
+.capacity-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.capacity-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.capacity-value.highlight {
+    color: var(--primary);
+}
+
+/* 提交按鈕 */
+.submit-btn {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+    font-size: 1.1rem;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+/* 價格說明 */
+.price-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-sm);
+}
+
+/* 區塊間距 */
+.guests-section,
+.extras-section,
+.pets-section {
+    margin-top: var(--spacing-lg);
+}
+
+/* 響應式調整 */
+@media (max-width: 600px) {
+    .booking-title {
+        font-size: 2rem;
+    }
+
+    .booking-header {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .booking-header {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+}
+
+/* ============================
+   Step 2: Receipt Style Breakdown
+   ============================ */
+
+.price-breakdown-list {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #eee;
+}
+
+.price-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.price-detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.detail-formula {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+.detail-amount {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.price-divider {
+    height: 2px;
+    background: #333;
+    margin: 12px 0;
+}
+
+.price-row.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d6336c;
+    /* Highlight color */
+    padding-top: 4px;
+}

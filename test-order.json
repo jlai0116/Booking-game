@@ -1,0 +1,11 @@
+{
+    "roomNumber": "201",
+    "checkIn": "2026-02-16",
+    "checkOut": "2026-02-22",
+    "adults": 2,
+    "children5Plus": 1,
+    "childrenUnder5": 3,
+    "extraBeds": 1,
+    "petLarge": 1,
+    "petSmall": 0
+}
